@@ -1,18 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main/creature/Freshie.gd" type="Script" id=1]
+[ext_resource path="res://Main/creature/Hellish.tres" type="Material" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.505882, 1, 0.952941, 1 )
-
 [sub_resource type="PrismMesh" id=4]
 
 [sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 1, 0.00392157, 0.00392157, 1 )
+albedo_color = Color( 0.054902, 0.890196, 0.952941, 1 )
+
+[sub_resource type="CylinderMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.0352941, 0.945098, 0.262745, 1 )
 
 [node name="Freshie" type="KinematicBody" groups=[
 "units",
@@ -28,9 +31,15 @@ shape = SubResource( 1 )
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.66374, 0, 0, 0, 1, 0, 1.78766, 0 )
 mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+material/0 = ExtResource( 2 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
 transform = Transform( -0.00229284, -1.07362, 0, 1.12278, -0.00219244, 0, 0, 0, 0.396626, -1.09703, 1.78766, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
+
+[node name="SelectionRing" type="MeshInstance" parent="."]
+transform = Transform( 2.08966, 0, 0, 0, 0.0914007, 0, 0, 0, 2.08966, 0, 0.130785, 0 )
+visible = false
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
