@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="TBTSgame"
-run/main_scene="res://Main/environment/World.tscn"
+run/main_scene="res://Main/itemComponent/Inventory.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ItemDB="*res://Main/itemComponent/ItemDB.tscn"
 
 [input]
 
@@ -27,6 +31,11 @@ main_command={
  ]
 }
 alt_command={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+inv_grab={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
