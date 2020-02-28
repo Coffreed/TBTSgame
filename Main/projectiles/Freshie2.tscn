@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Main/creature/Freshie.gd" type="Script" id=1]
-[ext_resource path="res://Main/creature/Hellish.tres" type="Material" id=2]
+[ext_resource path="res://Main/projectiles/Freshie2.gd" type="Script" id=1]
+[ext_resource path="res://Main/projectiles/Verdant.tres" type="Material" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -20,8 +20,8 @@ albedo_color = Color( 0.0352941, 0.945098, 0.262745, 1 )
 [node name="Freshie" type="KinematicBody" groups=[
 "units",
 ]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -43,3 +43,5 @@ transform = Transform( 2.08966, 0, 0, 0, 0.0914007, 0, 0, 0, 2.08966, 0, 0.13078
 visible = false
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
+
+[node name="Position3D" type="Position3D" parent="."]
