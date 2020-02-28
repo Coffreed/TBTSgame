@@ -1,21 +1,21 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Main/projectiles/Freshie2.gd" type="Script" id=1]
+[ext_resource path="res://Main/projectiles/Gun1.gd" type="Script" id=1]
 [ext_resource path="res://Main/projectiles/Verdant.tres" type="Material" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="PrismMesh" id=3]
+[sub_resource type="CylinderMesh" id=3]
 
 [sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 0.054902, 0.890196, 0.952941, 1 )
+albedo_color = Color( 0.0352941, 0.945098, 0.262745, 1 )
 
-[sub_resource type="CylinderMesh" id=5]
+[sub_resource type="CubeMesh" id=5]
 
 [sub_resource type="SpatialMaterial" id=6]
-albedo_color = Color( 0.0352941, 0.945098, 0.262745, 1 )
+albedo_color = Color( 0.588235, 0.294118, 0, 1 )
 
 [node name="Freshie" type="KinematicBody" groups=[
 "units",
@@ -29,19 +29,19 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.5,
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1.66374, 0, 0, 0, 1, 0, 1.78766, 0 )
+transform = Transform( 0.201092, 0, 0, 0, 0.202174, 0, 0, 0, 1, 0, 0.663096, -0.99117 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( -0.00229284, -1.07362, 0, 1.12278, -0.00219244, 0, 0, 0, 0.396626, -1.09703, 1.78766, 0 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 4 )
 
 [node name="SelectionRing" type="MeshInstance" parent="."]
 transform = Transform( 2.08966, 0, 0, 0, 0.0914007, 0, 0, 0, 2.08966, 0, 0.130785, 0 )
 visible = false
-mesh = SubResource( 5 )
-material/0 = SubResource( 6 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Position3D" type="Position3D" parent="."]
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.144578, 0, 0, 0, 0.192789, 0, 0, 0, 0.789579, 0, 0.373631, -2.30535 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )

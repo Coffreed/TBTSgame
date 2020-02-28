@@ -7,7 +7,7 @@ onready var timer = get_node("Timer")
 
 
 func _ready():
-	timer.set_wait_time(1)
+	timer.set_wait_time(2)
 	timer.start()
 	
 func start(xform):
