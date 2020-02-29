@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main/projectiles/Gun1.gd" type="Script" id=1]
 [ext_resource path="res://Main/projectiles/Verdant.tres" type="Material" id=2]
@@ -7,14 +7,9 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="CylinderMesh" id=3]
+[sub_resource type="CubeMesh" id=3]
 
 [sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 0.0352941, 0.945098, 0.262745, 1 )
-
-[sub_resource type="CubeMesh" id=5]
-
-[sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0.588235, 0.294118, 0, 1 )
 
 [node name="Gun1" type="KinematicBody" groups=[
@@ -28,20 +23,14 @@ script = ExtResource( 1 )
 transform = Transform( 0.415344, 0, 0, 0, -1.43765e-08, -0.31991, 0, 0.328896, -1.39837e-08, 0, 0.707813, -3.46276e-08 )
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Barrel" type="MeshInstance" parent="."]
 transform = Transform( 0.201092, 0, 0, 0, 0.202174, 0, 0, 0, 1, 0, 0.663096, -0.99117 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="SelectionRing" type="MeshInstance" parent="."]
-transform = Transform( 2.08966, 0, 0, 0, 0.0914007, 0, 0, 0, 2.08966, 0, 0.130785, 0 )
-visible = false
+[node name="Stock" type="MeshInstance" parent="."]
+transform = Transform( 0.144578, 0, 0, 0, 0.192789, 0, 0, 0, 0.789579, 0, 0.373631, -2.30535 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
 
 [node name="Position3D" type="Position3D" parent="."]
-
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 0.144578, 0, 0, 0, 0.192789, 0, 0, 0, 0.789579, 0, 0.373631, -2.30535 )
-mesh = SubResource( 5 )
-material/0 = SubResource( 6 )

@@ -1,6 +1,6 @@
 extends Area
 
-var speed = 70
+var speed = 110
 var velocity = Vector3()
 
 onready var timer = get_node("Timer")

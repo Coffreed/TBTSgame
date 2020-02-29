@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TBTSgame"
-run/main_scene="res://Main/projectiles/Road.tscn"
+run/main_scene="res://Main/environment/World.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -15,7 +15,7 @@ func _process(delta):
 		
 		
 func _unhandled_input(event):
-	if Input.is_action_just_pressed("Discharge") and ArrowCount < 2:
+	if Input.is_action_just_pressed("Discharge") and ArrowCount < 1:
 		ArrowCount += 1
 		var release = RELEASE.instance()
 		release.start($Position3D.global_transform)
