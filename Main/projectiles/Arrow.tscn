@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Main/projectiles/Arrow.gd" type="Script" id=1]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.588235, 0.294118, 0, 1 )
+
+[sub_resource type="CylinderShape" id=2]
+
+[sub_resource type="PrismMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.603922, 0.603922, 0.603922, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.968627, 0.0313726, 0.00784314, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.968627, 0.0313726, 0.00784314, 1 )
+
+[node name="Arrow" type="Area"]
+script = ExtResource( 1 )
+
+[node name="Shaft" type="MeshInstance" parent="."]
+transform = Transform( 0.0272882, 0, 0, 0, -4.37114e-08, -0.0242609, 0, 1, -1.06048e-09, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.0234771, 0, 0, 0, -5.49093e-08, -0.0266915, 0, 1.25618, -1.16672e-09, 0, -1.48559e-08, 0.339863 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Tip1" type="MeshInstance" parent="."]
+transform = Transform( 0.100927, 0, 0, 0, -1.10667e-08, -0.0181376, 0, 0.253177, -7.92819e-10, 0, -5.42263e-08, 1.24055 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 5 )
+
+[node name="Tip2" type="MeshInstance" parent="."]
+transform = Transform( -3.28862e-08, 5.08303e-08, -0.0262313, -0.100927, 5.08303e-08, 8.54725e-09, 1.64431e-08, 0.311994, 4.27363e-09, 0, -5.68384e-08, 1.30031 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 5 )
+
+[node name="Fletching1" type="MeshInstance" parent="."]
+transform = Transform( 0.0994144, 0.0538125, -1.97766e-10, 0, -1.36377e-08, -0.0262313, -0.0174078, 0.307318, -1.12942e-09, -0.0712077, 3.9468e-08, -0.904646 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 6 )
+
+[node name="Fletching2" type="MeshInstance" parent="."]
+transform = Transform( 0.0987696, -0.0641639, 2.35809e-10, 0, -1.36377e-08, -0.0262313, 0.0207564, 0.305325, -1.1221e-09, 0.0717051, 3.77645e-08, -0.904916 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 7 )

@@ -1,13 +1,13 @@
 extends Area
 
-var speed = 70
+var speed = 5
 var velocity = Vector3()
 
 onready var timer = get_node("Timer")
 
 
 func _ready():
-	timer.set_wait_time(2)
+	timer.set_wait_time(5)
 	timer.start()
 	
 func start(xform):

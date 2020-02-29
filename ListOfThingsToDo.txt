@@ -1,9 +1,11 @@
 1. Turn based movement	
 2. Selecting units	done
+	-Find a way to make it select with tab.
 3. Round counter	
 4. Inventory		done
-5. Projectile		
+5. Projectile		done
+	-Find a way to make it shoot 1 round at a time.
 6. Combat		
 7. Stats into models	
-8. Basic Menu
+8. Basic Menu		
 9. Map UI		
