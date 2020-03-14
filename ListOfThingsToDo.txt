@@ -5,7 +5,14 @@
 4. Inventory		done
 5. Projectile		done
 	-Find a way to make it shoot 1 round at a time.
+	-Find a way to make it shoot from gun and move on map rather than character.
 6. Combat		
 7. Stats into models	
 8. Basic Menu		
-9. Map UI		
+9. Map UI		done
+	-Change to hexgrid.
+	HexGridDimensions in units
+	X=1.73205
+	Y=2.00000
+	Z=0.11507
+10. Combat enviorment.

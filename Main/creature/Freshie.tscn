@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main/creature/Freshie.gd" type="Script" id=1]
 [ext_resource path="res://Main/creature/Hellish.tres" type="Material" id=2]
+[ext_resource path="res://Main/healthbars/HealthBar3D.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -43,3 +44,7 @@ transform = Transform( 2.08966, 0, 0, 0, 0.0914007, 0, 0, 0, 2.08966, 0, 0.13078
 visible = false
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
+
+[node name="HealthBar3D" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.56011, 0 )
+pixel_size = 0.015

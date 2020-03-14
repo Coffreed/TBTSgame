@@ -177,6 +177,9 @@ team = 1
 [node name="Freshie5" parent="Navigation" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57827, 0.60942, 29.1341 )
 
+[node name="Gun2" parent="Navigation/Freshie5" instance=ExtResource( 4 )]
+transform = Transform( -0.998896, 0, 0.046984, 0, 1, 0, -0.046984, 0, -0.998896, 1.18988, 1.83977, -2.99121 )
+
 [node name="Freshie6" parent="Navigation" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.7831, 0.60942, 29.1341 )
 team = 1

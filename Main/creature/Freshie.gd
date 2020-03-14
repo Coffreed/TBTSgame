@@ -8,6 +8,8 @@ var team_colors = {
 
 var path = []
 var path_ind = 0
+var max_health = 5
+var health = 5
 const move_speed = 12
 onready var nav = get_parent()
 
@@ -26,6 +28,14 @@ func _physics_process(delta):
 			path_ind += 1
 		else:
 			move_and_slide(move_vec.normalized() * move_speed, Vector3(0, 1, 0))
+
+func _on_Mob_input_event(camera, event, click_position):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and emit_signal("ready"):
+			health -= 1
+			$HealthBar3D.update(health, max_health)
+			if health <= 0:
+				queue_free()
 
 func select():
 	$SelectionRing.show()
